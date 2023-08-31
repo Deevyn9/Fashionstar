@@ -4,8 +4,9 @@
     display: flex;
     justify-content: space-between;
     height: 80px;
+    width: 100vw;
     align-items: center;
-    border: 2px dashed red;
+    background-color: white;
     padding: 0 50px;
     font-family: 'Lato', sans-serif;
 }
@@ -26,6 +27,15 @@
     gap: 30px;
 }
 
+.nav .right__nav .nav__links ul li {
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.nav .right__nav .nav__links ul li:hover {
+    scale: 1.2;
+}
+
 .nav .right__nav .nav__button button {
     background-color: black;
     color: white;
@@ -33,4 +43,97 @@
     width: 140px;
     height: 40px;
     border-radius: 20px;
+    cursor: pointer;
 }
+
+.nav .nav__burger {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .nav__burger .burger__menu {
+    width: 35px;
+    height: 2px;
+    background-color: black;
+    transition: all .3s ease-in-out;
+}
+
+.nav .nav__burger .burger__menu::after, .nav .nav__burger .burger__menu::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 35px;
+    background-color: black;
+    transition: all .3s ease-in-out;
+}
+
+.nav .nav__burger .burger__menu::before {
+    transform: translateY(-10px);
+}
+
+.nav .nav__burger .burger__menu::after {
+    transform: translateY(10px);
+}
+
+.nav  .nav__burger .burger__menu.close {
+    background-color: transparent;
+} 
+
+.nav  .nav__burger .burger__menu.close::before {
+    transform: rotate(-45deg);
+}
+
+    .nav  .nav__burger .burger__menu.close::after {
+        transform: rotate(45deg);
+    }
+
+    @media (max-width: 768px) {
+        .nav {
+            padding: 0 15px;
+            z-index: 1000;
+        }
+
+        .nav .nav__burger {
+            display: flex;
+        }
+
+        .nav .right__nav {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            top: -100vh;
+            left: 0;
+            background-color: white;
+            width: 100vw;
+            height: calc(100vh - 80px);
+            z-index: -1;
+            transition: .3s all ease-in-out;
+        }
+
+        .nav .right__nav.open {
+            top: 80px;
+        }
+
+        .nav .right__nav .nav__links ul {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .nav .right__nav .nav__links ul li, .nav .right__nav .nav__button button {
+            font-size: 20px;
+        }
+
+        .nav .right__nav .nav__button button {
+            height: 50px;
+            width: 180px;
+        }
+    }
