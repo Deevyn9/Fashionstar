@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
 .nav {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     height: 80px;
@@ -44,6 +45,11 @@
     height: 40px;
     border-radius: 20px;
     cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.nav .right__nav .nav__button button:hover {
+scale: 1.05;
 }
 
 .nav .nav__burger {
