@@ -30,11 +30,27 @@
 
 .hero__images {
     display: flex;
+    gap: 50px;
 }
 
 .flex__image {
+    background-color: red;
     border: 1px dashed red;
-    height: 400px;
+    height: 500px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 25px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.flex__image.hovered {
     width: 400px;
 }
 
+.flex__image img {
+    /* position: absolute; */
+}
