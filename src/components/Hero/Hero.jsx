@@ -38,7 +38,7 @@ const Hero = () => {
     }
   }
 
-  function removeHover() {}
+  // function removeHover() {}
 
   const featured = featuredItems.map((item) => {
     return (
@@ -47,13 +47,17 @@ const Hero = () => {
           hoveredItem === item.id ? "flex__image hovered" : "flex__image"
         }
         key={item.id}
-        onMouseEnter={() => handleHover(item)}
-        onMouseLeave={() => removeHover()}
+        onClick={() => handleHover(item)}
+        // onMouseLeave={() => removeHover()}
         style={{
-          backgroundColor: `${hoveredItem === item.id ? "red" : "transparent"}`,
+          backgroundImage: `${item.img}`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+
+          // backgroundColor: `${hoveredItem === item.id ? "red" : "transparent"}`,
         }}
       >
-        <img src={item.img} alt="" />
+        {/* <img src={item.img} alt="" /> */}
       </div>
     );
   });
