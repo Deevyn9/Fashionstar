@@ -1,0 +1,32 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+}
+
+.contact h2 {
+    margin-bottom: 10px;
+}
+
+.contact p {
+    margin-bottom: 40px;
+    font-size: 16px;
+    max-width: 850px;
+}
+
+.contact .contact__images {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact button {
+    align-self: center;
+    background-color: transparent;
+    margin-top: 70px;
+    width: 150px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
