@@ -1,0 +1,10 @@
+.footer {
+    background-color: #fafafa;
+    display: flex;
+    padding: 100px;
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+}
