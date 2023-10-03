@@ -3,28 +3,35 @@ import FaceModelling from "../../assets/Face Modelling.svg";
 import Commercial from "../../assets/Commercial.svg";
 import Runway from "../../assets/Runway.svg";
 import Editorial from "../../assets/Editorial.svg";
-
+import FaceModellingSmall from "../../assets/face small.png";
+import CommercialSmall from "../../assets/commercial small.png";
+import EditorialSmall from "../../assets/editorial small.png";
+import RunwaySmall from "../../assets/runway small.png";
 import "./Hero.css";
 
 const featuredItems = [
   {
     id: 1,
     img: FaceModelling,
+    smallimg: FaceModellingSmall,
     text: "Face Modelling",
   },
   {
     id: 2,
     img: Commercial,
+    smallimg: CommercialSmall,
     text: "Commercial",
   },
   {
     id: 3,
     img: Runway,
+    smallimg: RunwaySmall,
     text: "Runway",
   },
   {
     id: 4,
     img: Editorial,
+    smallimg: EditorialSmall,
     text: "Editorial",
   },
 ];
@@ -38,8 +45,6 @@ const Hero = () => {
     }
   }
 
-  // function removeHover() {}
-
   const featured = featuredItems.map((item) => {
     return (
       <div
@@ -48,16 +53,9 @@ const Hero = () => {
         }
         key={item.id}
         onClick={() => handleHover(item)}
-        // onMouseLeave={() => removeHover()}
-        style={{
-          backgroundImage: `${item.img}`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-
-          // backgroundColor: `${hoveredItem === item.id ? "red" : "transparent"}`,
-        }}
       >
-        {/* <img src={item.img} alt="" /> */}
+        <img src={hoveredItem === item.id ? item.img : item.smallimg} alt="" />
+        <p>{item.text}</p>
       </div>
     );
   });
@@ -71,13 +69,7 @@ const Hero = () => {
           <button>Text</button>
         </div>
       </div>
-      <div className="hero__images">
-        {featured}
-        {/* <div className="flex__image"></div>
-        <div className="flex__image"></div>
-        <div className="flex__image"></div>
-        <div className="flex__image"></div> */}
-      </div>
+      <div className="hero__images">{featured}</div>
     </div>
   );
 };

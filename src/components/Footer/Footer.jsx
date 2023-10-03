@@ -50,7 +50,7 @@ const Footer = () => {
         <h3>Contact Us</h3>
         <ul>
           <li>(+34) 58 2453 9748</li>
-          <li>Council"gmail.com</li>
+          <li>Council@gmail.com</li>
           <li>Lighthouse No.22, LA</li>
         </ul>
       </div>
