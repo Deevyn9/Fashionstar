@@ -53,6 +53,7 @@ const Hero = () => {
         }
         key={item.id}
         onClick={() => handleHover(item)}
+        // style={}
       >
         <img src={hoveredItem === item.id ? item.img : item.smallimg} alt="" />
         <p>{item.text}</p>
