@@ -1,38 +1,38 @@
 import { useState } from "react";
-import FaceModelling from "../../assets/Face Modelling.svg";
-import Commercial from "../../assets/Commercial.svg";
-import Runway from "../../assets/Runway.svg";
-import Editorial from "../../assets/Editorial.svg";
-import FaceModellingSmall from "../../assets/face small.png";
-import CommercialSmall from "../../assets/commercial small.png";
-import EditorialSmall from "../../assets/editorial small.png";
-import RunwaySmall from "../../assets/runway small.png";
+import FaceModelling from "../../assets/Face Modelling.png";
+import Commercial from "../../assets/Commercial Modelling.png";
+import Runway from "../../assets/runway modelling.png";
+import Editorial from "../../assets/Editorial modelling.png";
+import FaceModellingSmall from "../../assets/Face Modelling small.png";
+import CommercialSmall from "../../assets/Commercial Modelling small.png";
+import EditorialSmall from "../../assets/editorial modelling small.png";
+import RunwaySmall from "../../assets/runway modelling small.png";
 import "./Hero.css";
 
 const featuredItems = [
   {
     id: 1,
+    class: "face",
     img: FaceModelling,
     smallimg: FaceModellingSmall,
-    text: "Face Modelling",
   },
   {
     id: 2,
+    class: "commercial",
     img: Commercial,
     smallimg: CommercialSmall,
-    text: "Commercial",
   },
   {
     id: 3,
+    class: "runway",
     img: Runway,
     smallimg: RunwaySmall,
-    text: "Runway",
   },
   {
     id: 4,
+    class: "editorial",
     img: Editorial,
     smallimg: EditorialSmall,
-    text: "Editorial",
   },
 ];
 
@@ -49,15 +49,14 @@ const Hero = () => {
     return (
       <div
         className={
-          hoveredItem === item.id ? "flex__image hovered" : "flex__image"
+          hoveredItem === item.id
+            ? `${item.class} flex__image hovered`
+            : `${item.class} flex__image`
         }
         key={item.id}
         onClick={() => handleHover(item)}
         // style={}
-      >
-        <img src={hoveredItem === item.id ? item.img : item.smallimg} alt="" />
-        <p>{item.text}</p>
-      </div>
+      ></div>
     );
   });
 
