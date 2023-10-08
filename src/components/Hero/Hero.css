@@ -1,7 +1,7 @@
 .Hero {
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     border: 2px dashed blue;
     align-items: center;
     padding: 0 100px;
@@ -42,7 +42,9 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
+    background-size: cover;
+    background-position: center;
 }
 
 .flex__image.hovered {
@@ -64,41 +66,33 @@
 }
 
 .flex__image.face {
-    background-image: url(../../assets/Face\ Modelling\ small.png) no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: url('../../assets/FaceModellingsmall.png') no-repeat;
 }
 
 .flex__image.face.flex__image.hovered {
-    background-color: purple;
+    background: url('../../assets/FaceModelling.png');
 }
 
 .flex__image.commercial {
-    /* background: url(../../assets/Face\ Modelling\ small.png) no-repeat;
-    background-size: cover; */
-    background-color: red;
+    background: url('../../assets/CommercialModellingsmall.png');   
 }
 
 .flex__image.commercial.hovered {
-    background-color: purple;
+    background: url('../../assets/CommercialModelling.png');
 }
 
 .flex__image.runway {
-    /* background: url(../../assets/Face\ Modelling\ small.png) no-repeat;
-    background-size: cover; */
-    background-color: red;
+    background: url('../../assets/runwaymodellingsmall.png');
 }
 
 .flex__image.runway.hovered {
-    background-color: purple;
+    background: url('../../assets/runwaymodelling.png');
 }
 
 .flex__image.editorial {
-    /* background: url(../../assets/Face\ Modelling\ small.png) no-repeat;
-    background-size: cover; */
-    background-color: red;
+    background: url('../../assets/editorialmodellingsmall.png');
 }
 
 .flex__image.editorial.hovered {
-    background-color: purple;
+    background: url('../../assets/Editorialmodelling.png');   
 }

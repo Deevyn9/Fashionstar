@@ -1,38 +1,22 @@
 import { useState } from "react";
-import FaceModelling from "../../assets/Face Modelling.png";
-import Commercial from "../../assets/Commercial Modelling.png";
-import Runway from "../../assets/runway modelling.png";
-import Editorial from "../../assets/Editorial modelling.png";
-import FaceModellingSmall from "../../assets/Face Modelling small.png";
-import CommercialSmall from "../../assets/Commercial Modelling small.png";
-import EditorialSmall from "../../assets/editorial modelling small.png";
-import RunwaySmall from "../../assets/runway modelling small.png";
 import "./Hero.css";
 
 const featuredItems = [
   {
     id: 1,
     class: "face",
-    img: FaceModelling,
-    smallimg: FaceModellingSmall,
   },
   {
     id: 2,
     class: "commercial",
-    img: Commercial,
-    smallimg: CommercialSmall,
   },
   {
     id: 3,
     class: "runway",
-    img: Runway,
-    smallimg: RunwaySmall,
   },
   {
     id: 4,
     class: "editorial",
-    img: Editorial,
-    smallimg: EditorialSmall,
   },
 ];
 
