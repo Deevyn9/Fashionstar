@@ -22,11 +22,20 @@ const featuredItems = [
 
 const Hero = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
+  const [buttonHover, setButtonHover] = useState(true)
 
   function handleHover(item) {
     if (hoveredItem !== item.id) {
       setHoveredItem(item.id);
     }
+  }
+
+  function hoveredButton () {
+    setButtonHover(true);
+  }
+
+  function removeButtonHover () {
+    setButtonHover(false)
   }
 
   const featured = featuredItems.map((item) => {
@@ -50,7 +59,10 @@ const Hero = () => {
         <h1>Ready, Set, Pose!</h1>
         <div className="hero__input">
           <input type="text" placeholder="Want to know more?" />
-          <button>Text</button>
+          <button onMouseEnter={() => hoveredButton()} onMouseLeave={() => removeButtonHover()}>
+            <div className={buttonHover ? "yellow full" : "yellow"}></div>
+            <p>Text</p>
+          </button>
         </div>
       </div>
       <div className="hero__images">{featured}</div>

@@ -15,27 +15,36 @@
 
 .nav .nav__logo img {
     width: 138px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.nav .nav__logo img:hover {
+    transform: scale(1.1);
 }
 
 .nav .right__nav {
     display: flex;
-    gap: 70px;
     align-items: center;
+    height: 40px;
+
 }
 
 .nav .right__nav .nav__links ul {
     display: flex;
     list-style: none;
-    gap: 30px;
+    align-items: center;
+    height: 100%;
 }
 
 .nav .right__nav .nav__links ul li {
     cursor: pointer;
     transition: all .3s ease-in-out;
+    margin-right: 30px;
 }
 
 .nav .right__nav .nav__links ul li:hover {
-    scale: 1.2;
+    transform: scale(1.2);
 }
 
 .nav .right__nav .nav__button button {
@@ -47,10 +56,11 @@
     border-radius: 20px;
     cursor: pointer;
     transition: all .3s ease-in-out;
+    margin-left: 70px;
 }
 
 .nav .right__nav .nav__button button:hover {
-scale: 1.05;
+    transform: scale(1.05);
 }
 
 .nav .nav__burger {
