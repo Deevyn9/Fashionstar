@@ -73,7 +73,6 @@
 
 .hero__images {
     display: flex;
-    /* gap: 50px; */
     position: absolute;
     right: 100px;
     z-index: 1;
